@@ -1,0 +1,130 @@
+/* Imposta una dimensione massima per la GIF interna */
+body::after {
+    content: '';
+    background: url('https://media.giphy.com/media/XbJQxRcgBFVMuQ8M5U/giphy.gif') center center no-repeat;
+    position: fixed;
+    background-size: cover;
+    width: 50vmin; /* Imposta la larghezza al 50% della viewport minimum dimension (larghezza o altezza) */
+    height: 50vmin; /* Imposta l'altezza al 50% della viewport minimum dimension (larghezza o altezza) */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+body {
+    min-height: 150vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+.header::after {
+    content: '';
+    background-image: url('https://www.kickkick.it/img/cms/ESTETICA_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.navbar-custom {
+    background-color: #ff4081;
+    padding: 15px;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #ffd32a;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.card {
+    margin-top: 25px;
+    background-color: #ffceed; /* Colore rosa chiaro */
+    color: #333; /* Colore del testo nero per una migliore leggibilità */
+    border: 1px solid #ff4081; /* Bordo rosa acceso */
+    border-radius: 15px; /* Bordo arrotondato */
+}
+
+.card img {
+    max-height: 400px; /* Imposta l'altezza fissa delle immagini */
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #ff4081;
+    border-color: #ff4081;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #ffd32a;
+    border-color: #ffd32a;
+    color: #fff;
+}
+
+.footer {
+    background-color: #ff4081;
+    color: #fff;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #ffd32a;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+/* Stile per il carrello */
+.cart-icon-container {    
+    top: 50%;    
+    right: 50px; /* Regola la distanza dalla destra in base alle tue esigenze */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 1rem; /* Imposta la dimensione dell'icona del carrello */    
+    color: #fff;    
+    border-radius: 50%;
+    z-index: 1; /* Assicurati che l'icona sia sopra il contenuto della navbar */
+}
+
+#cart-counter-navbar {    
+    top: 50%;
+    transform: translateY(-50%);
+    right: 45px; /* Regola la distanza dalla destra in base alle tue esigenze */
+    background-color: red; /* Personalizza il colore dello sfondo del contatore */
+    color: white; /* Personalizza il colore del testo del contatore */
+    border-radius: 50%; /* Rendi il contatore circolare */
+    padding: 0.2rem 0.5rem; /* Aggiungi spaziatura interna al contatore */
+    z-index: 2; /* Assicurati che il contatore sia sopra l'icona del carrello */
+}
